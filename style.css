@@ -1,0 +1,297 @@
+/*
+Descricao: Exercícios da Aula 02 - Introdução básica ao HTML e CSS
+nome_arquivo: index.html
+nome_exercicio: Atividade 02 - Introdução básica ao HTML e CSS
+nome_aluno: Leandro Gonzalis
+email_aluno: leandrogonzalis@hotmail.com
+turma: WEBI-ISW028A
+*/ 
+
+/* Seletor universal, zera margens...*/
+* * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333333;
+}
+
+
+/* CABEÇALHO */
+
+header {
+    background-color: #1d3557;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    margin: 10px 0;
+}
+
+
+/* MENU */
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+
+/* BANNER */
+
+.banner {
+    background-color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.banner h2 {
+    color: #1d3557;
+    font-size: 28px;
+}
+
+
+/* PRODUTOS */
+
+.produtos {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.produto {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.produto h3 {
+    color: #1d3557;
+}
+
+
+.produto strong {
+    display: block;
+    margin: 15px 0;
+
+    font-size: 20px;
+
+    color: #e63946;
+}
+
+
+/* ESPAÇO PARA IMAGEM */
+
+.imagem-produto {
+    width: 100%;
+    max-width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    background-color: #dddddd;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 8px;
+
+    color: #666666;
+
+    font-weight: bold;
+}
+
+
+/* BOTÕES */
+
+.botao {
+    display: inline-block;
+
+    background-color: #457b9d;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 20px;
+
+    border-radius: 5px;
+
+    margin-top: 10px;
+}
+
+
+.botao:hover {
+    background-color: #1d3557;
+}
+
+
+/* PÁGINA DE CONTATO */
+
+.contato {
+    background-color: white;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 30px;
+
+    border-radius: 10px;
+}
+
+
+.contato h2 {
+    color: #1d3557;
+}
+
+
+/* FORMULÁRIO */
+
+form {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+label {
+    margin-top: 15px;
+
+    margin-bottom: 5px;
+
+    font-weight: bold;
+}
+
+
+input,
+textarea {
+    padding: 12px;
+
+    border: 1px solid #cccccc;
+
+    border-radius: 5px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+}
+
+
+textarea {
+    resize: vertical;
+}
+
+
+button {
+    margin-top: 20px;
+
+    padding: 12px;
+
+    background-color: #1d3557;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: #457b9d;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    background-color: #1d3557;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 40px;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+
+    .produtos {
+        grid-template-columns: 1fr;
+    }
+
+
+    nav a {
+        display: block;
+
+        margin: 10px;
+    }
+
+
+    header h1 {
+        font-size: 26px;
+    }
+
+
+    main {
+        width: 95%;
+    }
+
+}
